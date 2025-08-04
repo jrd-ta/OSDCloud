@@ -90,8 +90,7 @@ function New-SetupCompleteOSDCloudFiles{
     #Create PowerShell File to do actions
 
     New-Item -Path $PSFilePath -ItemType File -Force
-    Add-Content -path $PSFilePath "Write-Output 'Starting SetupComplete Script Process'")'"
-    Add-Content -path $PSFilePath 'if ((Test-WebConnection) -ne $true){Write-error "No Internet, Sleeping 2 Minutes" ; start-sleep -seconds 120}'
+    Add-Content -path $PSFilePath "Write-Output 'Starting SetupComplete Script Process'"
     Add-Content -path $PSFilePath 'iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/SetupComplete/Debloated.ps1)'
 }
 
