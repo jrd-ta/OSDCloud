@@ -22,19 +22,19 @@ if ($env:SystemDrive -ne 'X:') {
     iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/RemoveBloat.ps1)
     #MS Teams personal removal
     Write-Host -ForegroundColor Gray "**Removing Microsoft Teams Personal**"
-    iex (irm https://raw.githubusercontent.com/suazione/CodeDump/main/Set-ConfigureChatAutoInstall.ps1)
+    iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/TeamsRemoval.ps1)
     #OSDCloud cleanup script
     Write-SectionHeader -Message "**Running OSDCloud Cleanup Script**"
-    iex (irm https://gist.githubusercontent.com/AkosBakos/0b81812f5c6c6bc5b69495469c96be1b/raw/CleanUp.ps1)
+    iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/CleanUp.ps1)
 
     #OEM Updates
     try {
-        iex (irm https://raw.githubusercontent.com/gwblok/garytown/master/Dev/CloudScripts/LenovoUpdate.ps1)
+        iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/Lenovo.ps1)
     }
     catch {}
 
     try {
-        iex (irm https://dell.garytown.com)
+        iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/Dell.ps1)
     }
     catch {}
 
