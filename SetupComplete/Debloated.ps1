@@ -20,7 +20,11 @@ if ($env:SystemDrive -ne 'X:') {
     #Modified Version of Andrew's Debloat Script
     Write-SectionHeader -Message "**Running Debloat Script**" 
     iex (irm https://raw.githubusercontent.com/andrew-s-taylor/public/refs/heads/main/De-Bloat/RemoveBloat.ps1)
+    #MS Teams personal removal
+    Write-Host -ForegroundColor Gray "**Removing Microsoft Teams Personal**"
     iex (irm https://raw.githubusercontent.com/suazione/CodeDump/main/Set-ConfigureChatAutoInstall.ps1)
+    #OSDCloud cleanup script
+    Write-SectionHeader -Message "**Running OSDCloud Cleanup Script**"
     iex (irm https://gist.githubusercontent.com/AkosBakos/0b81812f5c6c6bc5b69495469c96be1b/raw/CleanUp.ps1)
 
     #OEM Updates
@@ -38,5 +42,5 @@ if ($env:SystemDrive -ne 'X:') {
     Write-Host -ForegroundColor Gray "**Setting TimeZone based on IP**"
     Set-TimeZoneFromIP
 
-    Write-SectionHeader -Message  "**Completed Hope.garytown.com sub script**" 
+    Write-SectionHeader -Message  "**Completed Sub script**" 
 }
