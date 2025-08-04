@@ -19,7 +19,7 @@ if ($env:SystemDrive -ne 'X:') {
 
     #Modified Version of Andrew's Debloat Script
     Write-SectionHeader -Message "**Running Debloat Script**" 
-    iex (irm https://raw.githubusercontent.com/andrew-s-taylor/public/refs/heads/main/De-Bloat/RemoveBloat.ps1)
+    iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/RemoveBloat.ps1)
     #MS Teams personal removal
     Write-Host -ForegroundColor Gray "**Removing Microsoft Teams Personal**"
     iex (irm https://raw.githubusercontent.com/suazione/CodeDump/main/Set-ConfigureChatAutoInstall.ps1)
