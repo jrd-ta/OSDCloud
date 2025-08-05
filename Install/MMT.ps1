@@ -178,4 +178,4 @@ New-SetupCompleteOSDCloudFiles
 
 
 #Restart
-#restart-computer
+restart-computer
