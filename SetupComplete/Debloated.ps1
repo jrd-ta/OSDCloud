@@ -25,7 +25,7 @@ if ($env:SystemDrive -ne 'X:') {
     iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/TeamsRemoval.ps1)
     #OSDCloud cleanup script
     Write-SectionHeader -Message "**Running OSDCloud Cleanup Script**"
-    iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/CleanUp.ps1)
+    #iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/CleanUp.ps1)
 
     #OEM Updates
     try {
