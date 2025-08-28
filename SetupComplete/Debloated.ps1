@@ -23,10 +23,23 @@ if ($env:SystemDrive -ne 'X:') {
     #MS Teams personal removal
     Write-Host -ForegroundColor Gray "**Removing Microsoft Teams Personal**"
     iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/TeamsRemoval.ps1)
+    # Execute local Hash.ps1 script with error handling
+    Write-Host -ForegroundColor Gray "**Running Hash.ps1 Script**"
+    try {
+        if (Test-Path "C:\OSDCloud\Scripts\SetupComplete\Hash.ps1") {
+            & "C:\OSDCloud\Scripts\SetupComplete\Hash.ps1"
+            Write-Host -ForegroundColor Green "Hash.ps1 completed successfully"
+        } else {
+            Write-Host -ForegroundColor Yellow "Hash.ps1 not found at specified path"
+        }
+    }
+    catch {
+        Write-Host -ForegroundColor Red "Error running Hash.ps1: $($_.Exception.Message)"
+    }
     #OSDCloud cleanup script
     Write-SectionHeader -Message "**Running OSDCloud Cleanup Script**"
     #iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/CleanUp.ps1)
-
+    
     #OEM Updates
     try {
         iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/Lenovo.ps1)
