@@ -26,7 +26,6 @@ if ($env:SystemDrive -ne 'X:') {
     # Execute local Hash.ps1 script with error handling
 
 
-    
     #OEM Updates
     try {
         iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/Lenovo.ps1)
@@ -43,6 +42,6 @@ if ($env:SystemDrive -ne 'X:') {
     Set-TimeZoneFromIP
     #OSDCloud cleanup script
     Write-SectionHeader -Message "**Running OSDCloud Cleanup Script**"
-    #iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/CleanUp.ps1)
+    iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/CleanUp.ps1)
     Write-SectionHeader -Message  "**Completed Sub script**" 
 }
