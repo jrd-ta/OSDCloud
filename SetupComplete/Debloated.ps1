@@ -1,6 +1,6 @@
 if ($env:SystemDrive -ne 'X:') {
     Set-ExecutionPolicy Bypass -Force
-    
+    Write-SectionHeader -Message "**Testing**"
     #Windows Updates
     Write-SectionHeader -Message "**Running MS Updates**"
     Write-Host -ForegroundColor Gray "**Running Defender Updates**"
