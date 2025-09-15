@@ -45,6 +45,4 @@ if ($env:SystemDrive -ne 'X:') {
 
     Write-SectionHeader -Message  "**Completed Sub script**" 
     #OSDCloud cleanup script
-    Write-SectionHeader -Message "**Running OSDCloud Cleanup Script**"
-    iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/CleanUp.ps1)
 }
