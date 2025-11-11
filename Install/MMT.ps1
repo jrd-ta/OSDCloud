@@ -1,5 +1,5 @@
 $OSName = 'Windows 11 25H2 x64'
-$OSEdition = 'Enterprise'
+$OSEdition = 'Professional'
 $OSActivation = 'Volume'
 $OSLanguage = 'en-us'
 
