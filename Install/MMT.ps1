@@ -16,7 +16,7 @@ $Global:MyOSDCloud = [ordered]@{
     SetTimeZone = [bool]$true
     ClearDiskConfirm = [bool]$False
     ShutdownSetupComplete = [bool]$false
-    SyncMSUpCatDriverUSB = [bool]$true
+    SyncMSUpCatDriverUSB = [bool]$false
     CheckSHA1 = [bool]$true
 }
 
