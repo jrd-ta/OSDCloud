@@ -110,9 +110,9 @@ if ($env:SystemDrive -eq 'X:') {
 
         New-Item -Path $PSFilePath -ItemType File -Force
         Add-Content -path $PSFilePath "Write-Output 'Starting SetupComplete OSDCloudWrapperDemo Script Process'"
-        Add-Content -path $PSFilePath "Write-Output 'iex (irm https://raw.githubusercontent.com/gwblok/garytown/refs/heads/master/Dev/CloudScripts/OSDCloudWrapperDemo.ps1)'"
+        Add-Content -path $PSFilePath "Write-Output 'iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Install/MMT.ps1)'"
         Add-Content -path $PSFilePath 'if ((Test-WebConnection) -ne $true){Write-error "No Internet, Sleeping 2 Minutes" ; start-sleep -seconds 120}'
-        Add-Content -path $PSFilePath 'iex (irm https://raw.githubusercontent.com/gwblok/garytown/refs/heads/master/Dev/CloudScripts/OSDCloudWrapperDemo.ps1)'
+        Add-Content -path $PSFilePath 'iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Install/MMT.ps1)'
     }
     Write-Host "==================================================" -ForegroundColor DarkGray
     Write-Host "OSDCloud Process Complete, Running Custom Actions From Script Before Reboot" -ForegroundColor Magenta
@@ -146,5 +146,7 @@ else {
     Write-Host "Starting $ScriptName $ScriptVersion"
     Write-Output "If you see this, then it worked! (Wrapper Script injected into SetupComplete)"
     #IF you want to add more things to do inside of Setup Complete, add them here!
+    iex (irm https://raw.githubusercontent.com/andrew-s-taylor/public/refs/heads/main/De-Bloat/RemoveBloat.ps1)
+    iex (irm https://raw.githubusercontent.com/jrd-ta/OSDCloud/refs/heads/main/Scripts/CleanUp.ps1)
 }
 
