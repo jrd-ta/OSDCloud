@@ -139,7 +139,7 @@ if ($env:SystemDrive -eq 'X:') {
         Copy-Item -Path $env:TEMP\$LogName -Destination C:\OSDCloud\Logs -Force
     }
     #Restart
-    #restart-computer
+    restart-computer
 }
 else {
     <# This will happen from inside Setup Complete #>
